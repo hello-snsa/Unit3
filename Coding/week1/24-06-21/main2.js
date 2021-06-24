@@ -1,6 +1,8 @@
 // a5000c74f0241ce5e4ddc4481b7fd071
 // api.openweathermap.org/data/2.5/weather?q=London&appid={a5000c74f0241ce5e4ddc4481b7fd071}
 
+let container= document.getElementById('container');
+
 
 async function getWeatherData(){
 
@@ -14,13 +16,29 @@ async function getWeatherData(){
 
     showWeatherData(data);
 } catch(e){
-    console.log("e",e);
+    console.log("e: ",e);
     }
 
     }
 
-getWeatherData();
+
 
 function showWeatherData(d){
+    let name=document.createElement('p');
+    name.innerText=`name - ${d.name}`;
+
+
+    let temp=document.createElement('p');
+    temp.innerHTML=`Temp - ${Math.round(d.main.temp) - 273} C `;
+
+    let humidity=document.createElement('p');
+    humidity.innerText=`humidity - ${d.main.humidity}`;
+
+    let pressure=document.createElement('p');
+    pressure.innerText=`pressure - ${d.main.pressure}`;
+
+    
+    container.append(name,temp,humidity,pressure);
 
 }
+getWeatherData();
