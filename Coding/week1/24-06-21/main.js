@@ -1,34 +1,39 @@
-let products_data=[];
+let products_data = [];
+let container = document.getElementById("container");
 
-async function getData(){
+async function getData() {
+  try {
+    let response = await fetch("https://fakestoreapi.com/products");
 
-    try{
-   let response = await fetch('https://fakestoreapi.com/products');
+    let data = await response.json();
 
-   let data= await response.json();
-
-    console.log("data:",data)
+    console.log("data:", data);
 
     appendProducts(data);
-
-}catch(e){
-    console.log('e:',e);
-
-}
-
+  } catch (e) {
+    console.log("e:", e);
+  }
 }
 
 getData();
 
-function appendProducts(d){
-// console.log(d);
-d.forEach(function (el) {
-    let div = document.createElement('div');
-    let img = document.createElement('img');
-    img.src=el.image;
+// appendProducuts();
 
-    let title=document.createElement('p');
+function appendProducts(d) {
+  // console.log(d);
+  d.forEach(function (el) {
+    let div = document.createElement("div");
+    let img = document.createElement("img");
+    img.src = el.image;
 
-});
+    let title = document.createElement("p");
+    title.innerText = el.title;
+    let price = document.createElement("p");
+    price.innerText = el.price;
+    let description = document.createElement("p");
+    description.innerText = el.description;
 
+    div.append(img, title, price, description);
+    container.append(div);
+  });
 }
