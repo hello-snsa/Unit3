@@ -49,12 +49,13 @@ function showMovieData(d){
     if(d.Title==undefined)
 {
     
-    // container.innerHTML=" can't find movie. Please search again... "+"\n";
+    container.innerHTML=" can't find movie. Please search again... "+"\n";
     // container.append('\n',"can't find movie. Please search again... "+"\n ")
 
 }else{
     
-    container.append(poster,name,year,imdbRating,releasedDate);
+  let myData=  container.append(poster,name,year,imdbRating,releasedDate);
+  
 //    container.innerHTML= container.append(name,year,imdbRating,releasedDate,rated).value;
 }
 
