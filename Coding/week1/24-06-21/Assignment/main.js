@@ -37,8 +37,27 @@ function showMovieData(d){
     let releasedDate=document.createElement('p');
     releasedDate.innerText=`releasedDate - ${d.Released}`;
 
+    let rated=document.createElement('p');
+    rated.innerText=`rated - ${d.Rated}`;
+
+    let poster=document.createElement('img');
+    poster.src=`${d.Poster}`
+
+    // If a movie is found, show the movie poster,.
+
+
+    if(d.Title==undefined)
+{
     
-    container.append(name,year,imdbRating,releasedDate);
+    container.innerHTML=" can't find movie. Please search again... "+"\n";
+    // container.append('\n',"can't find movie. Please search again... "+"\n ")
+
+}else{
+    
+  let myData=  container.append(poster,name,year,imdbRating,releasedDate);
+  
+//    container.innerHTML= container.append(name,year,imdbRating,releasedDate,rated).value;
+}
 
 }
 // getMovieData();
