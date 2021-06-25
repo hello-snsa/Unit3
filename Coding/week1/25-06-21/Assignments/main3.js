@@ -15,7 +15,7 @@ var query="";
 async function getNewsData(){
 container.innerHTML="";
     try{
-    let res = await fetch(` https://newsapi.org/v2/everything?q=${query}&apiKey=e8ecc7eb806a44cf84b713b3183e2685`);
+    let res = await fetch(` https://newsapi.org/v2/everything?q=bjp&apiKey=e8ecc7eb806a44cf84b713b3183e2685`);
     console.log("category",category)
     console.log("query",query)
 
