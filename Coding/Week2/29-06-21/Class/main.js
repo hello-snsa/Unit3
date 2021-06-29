@@ -2,7 +2,7 @@ console.log("Script main.js is working.")
 
 function Register(e){
     e.preventDefault();
-    const formdata={
+    let formdata={
         
         name: document.getElementById('inp1').value,
         email: document.getElementById('inp2').value,
@@ -15,10 +15,21 @@ function Register(e){
     // console.log('formdata:',formdata);
     formdata = JSON.stringify(formdata);
 
-    fetch ('https://masai-api-mocker.herokuapp.com/auth/register');
+    fetch ('https://masai-api-mocker.herokuapp.com/auth/register',
+    {
+        method: 'POST',
+        body: formdata,
+        //additional information your request
 
+        headers:{
+        'Content-Type':'application/json'
 
+        }
+})
+.then((response) => {
+    return response.json()
+}).then((response) => {
+    console.log('response: ',response)
 
-
-
+}).catch
 }
