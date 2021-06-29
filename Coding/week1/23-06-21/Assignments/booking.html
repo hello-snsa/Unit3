@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Booking</title>
+    <style>
+
+        .mainDiv{
+            display: grid;
+            grid-template-columns:33.33% 33.33% 33.33% ;
+            /* text-align: center; */
+            /* grid-gap: 1%; */
+            align-items: center;
+            margin-top: 5%;
+        }
+        input{
+            width:200px;
+            /* margin-left: 20px;; */
+        }
+        .mainDiv p{
+            float:left;
+            margin-left: 80%;
+        }
+        h1{
+            text-align: center;
+            margin-left: -25%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Booking Registartion</h1>
+    <div class="mainDiv">
+       
+
+       <p>    Name:</p> <input type="text" id="pName"> 
+           
+           <br/>
+        <!-- <div>  -->
+            <p>  Age:</p> <input type="text" id="pAge">
+            <!-- </div> -->
+            <br/>
+         <!-- <div>  -->
+             <p> Address:</p> <input type="text" id="pAddress">
+            <!-- </div> -->
+            <br/>
+           <!-- <div> -->
+               <p> aadhar:</p><input type="text" id="aadhar">
+            <!-- </div> -->
+
+
+       <br/>
+     <p>   <button id='btn' onclick="bookingTicket()">Submit</button></p>
+    </div>
+
+
+<div id="bookingCont"></div>
+
+
+
+    </div>
+    
+</body>
+</html>
+<script src="booking.js"></script>
