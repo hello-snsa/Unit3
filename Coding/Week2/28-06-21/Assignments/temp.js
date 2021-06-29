@@ -13,16 +13,7 @@ var myPromise= new Promise(xyz);
 
 
 
-myPromise.then(
-    function(res)
+
 {
-//print
-//sub
-//whatever +res
-}
-.catch
-
-
-){
     //
 }
