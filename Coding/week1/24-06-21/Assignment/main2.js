@@ -16,7 +16,7 @@ async function getMovieData(){
 
     showMovieData(data);
 } catch(e){
-    console.log("e: ",e);
+    console.log("error: ",e);
     }
 
     }
