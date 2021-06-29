@@ -24,6 +24,7 @@ async function fetchData() {
 }
 
 function showButtons(index) {
+    // console.log("first time ",index)
     let button_div = document.getElementById('button');
     button_div.innerHTML = null;
 
@@ -33,37 +34,43 @@ function showButtons(index) {
         index=6;
 
     }
-
-    for (let i = index-5;i <= index+4; i++) {
-        let btn = document.createElement('button');
-
-        btn.innerText = i ;
-        btn.setAttribute('id', `${i}`);
-        btn.onclick = showData;
-        button_div.appendChild(btn);
-
-    }
-    let btn=document.getElementById(original_index)
-    btn.style.backgroundColor='green'
+// console.log("before for",index)
+for (let i = index-5;i <= index+4; i++) {
+    let btn = document.createElement('button');
+    
+    btn.innerText = i ;
+    btn.setAttribute('id', `${i}`);
+    // console.log("before onclick",index,i);
+    btn.onclick = showData;
+    // console.log("after onclick",index,i);
+    button_div.appendChild(btn);
+    
+}
+// console.log("before for")
+// console.log("ouside for",index)
+let btn=document.getElementById(original_index);
+btn.style.backgroundColor='green';
 
 }
 
 function showData() {
-
     let id = Number(this.id);
+    // console.log("inside show data",id);
     let num= id-1;
     
-    let page_data= data.slice(num*10,num*10+10)
+    let page_data= data.slice(num*10,num*10+10);
+    let data_div= document.getElementById('data_div');
     data_div.innerHTML=null;
+    
 
-
-    page_data.forEach(function(el){
-        let p= document.createElement('p')
+    page_data.forEach((el)=>{
+        let p= document.createElement('p');
         p.innerText= `${el.id} ${el.name}`
         
         data_div.appendChild(p);
         
     });
 
+    // console.log("before showButton",id)
     showButtons(id);
 }
