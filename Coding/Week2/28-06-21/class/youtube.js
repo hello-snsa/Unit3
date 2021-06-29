@@ -1,11 +1,12 @@
 
 let videos_div= document.getElementById('videos');
+let myKey;
 
 async function searchVideos(){
 
 let query= document.getElementById('query').value;
 try{
-  var res= await  fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${query}&key=AIzaSyC28lWQiG6_Ow_FcKB7aNyUWgzfnHrkfIY&maxResults=5`)
+  var res= await  fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${query}&key=${myKey}&maxResults=5`)
 
   let {items}= await res.json();
 items=items.filter(({id:{videoId}})=>{return videoId!=undefined})
