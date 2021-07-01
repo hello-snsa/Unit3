@@ -45,7 +45,7 @@ async function main(){
 
 }
 
-var timer_id;
+var timer_id;//undefined
 function throttleFunction(func,delay){
    
 //If setTimeout is already there, no need to do anything.
@@ -55,10 +55,12 @@ function throttleFunction(func,delay){
     if(timer_id){
         return false;
     }
-        timer_id = setTimeout(()=>{
-            func() //calling main() function
+        
+    timer_id = setTimeout(()=>{ 
+            
+        func(); //calling main() function
 
-            timer_id = undefined;
+        timer_id = undefined;
 
         },delay);
 
