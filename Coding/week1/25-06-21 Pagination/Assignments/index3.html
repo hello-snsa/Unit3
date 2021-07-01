@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="style.css">
+     <script>
+        var category='general'
+    </script>
+    <style>
+        #button{
+            margin-left: 10%;
+        }
+        #button button{
+            width: 100px;
+            height:50px;
+            font-weight: 600;
+            font-size: 110%;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainDiv">
+        <!-- Nav bar Started -->
+    <div class="navBar">
+
+        <button onclick="home('general')">Home</button>
+        <button onclick="sports('sports')">Sports</button>
+        <button onclick="entertainment('entertainment')">Entertainment</button>
+        <button onclick="technology('technology')">Technology</button>
+        <input type="search" id="searchresult" placeholder="search">
+        <button onclick="searchRequest()">Search news</button>
+        <!-- <input type="text" placeholder="search"> -->
+
+    </div>
+        <!-- End nav bar -->
+
+    <div class="newsContainer"> 
+        <h1>Headline of the Day</h1>
+        
+        <div id="container"></div>
+    </div>
+    
+    <!-- pagination -->
+    
+    <div id="button"></div>
+
+</div>
+
+</body>
+</html>
+
+<script src="main3.js"></script>
+
+   
