@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starwar</title>
+    <style>
+        *{
+            color:white;
+        }
+        body{
+            background-color: black;
+            background-image:url("starwar.gif");
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+            
+        }
+      
+        #headerDiv{
+            align-items: right;
+            text-align: right;
+            justify-content: right;
+           
+        }
+        #headerDiv img{
+           
+            width: 25px;
+            margin-right: 5%;
+            margin-top: 3%;
+            /* margin-left: 80%; */
+        }
+
+#logo{
+    /* align-items: center; */
+    /* align-items: right; */
+    text-align: center;
+    /* justify-content: center; */
+    /* width: 200px; */
+}
+#logo img{
+    margin-top: 12%;
+    width: 200px;
+}
+button{
+    background-color: rgb(204, 188, 0);
+
+    border-radius: 50%;
+    width: 40px;
+    /* padding: 5px ;  */
+    padding-bottom: 1%;
+    padding-right: 1.5%;
+    padding-top: 0.5%;
+    padding-left: 1%;
+    margin-left: -5%;
+   
+}
+button img{
+    width: 15px;
+
+    padding-top: 10%;
+    margin-left: -5%;
+    /* margin-TOP: 20%; */
+}
+
+
+#searchIt{
+    width: 600px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: rgb(35, 38, 39);
+    border:transparent;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+
+}
+#searchIt {
+    margin-left: 0.5%;
+    padding-left: 2%;
+}
+#searchContainer{
+    margin-left: 30%;
+    margin-top: 3%;
+     background-color:  rgb(35, 38, 39); 
+     border-radius: 20px;
+     width: auto;
+     max-width: 650px;
+     padding-left: 2%;
+     padding-right: 2%;
+
+}
+
+#prinHere{
+    /* background-color:  gray; */
+    /* background-color:  rgb(35, 38, 39); */
+    margin: 0%;
+    width: 550px;
+    padding-left: 3%;
+    padding-top: 1%;
+    margin-left: 1%;
+    /* width: auto; */
+}
+.name{
+    float: left;
+    font-size: medium;
+}
+.gender{
+    text-align: right;
+    color:rgb(186, 188, 158)
+}
+.year{
+    clear: both;
+    color:rgb(186, 188, 158)
+
+}
+#below{
+    margin-top: 10px;
+}
+#belowDivs{
+    margin-top:-15%
+}
+input{
+    text-decoration: none;
+    border: transparent;
+    outline: none;
+}
+    </style>
+</head>
+<body>
+    <div class="mainDiv">
+
+        <div id="headerDiv">
+
+<img src="mute.svg"/>
+        </div>
+
+<div id="below">
+<div id="logo">
+    <img src="starwarz.png"/>
+</div>
+        <div id="searchContainer">
+            <div id="searchDiv">
+                <input type="search" id="searchIt" placeholder="Search characters" onkeypress="throttleFunction(main,200)" onkeyup="throttleFunction(main,200)">
+                <button id="btn" onclick="main()"><img src="search.svg"></button>
+            
+
+            </div>
+            <div id="printHere"></div>
+        </div>
+
+
+        </div>
+
+</div>
+
+    
+</body>
+</html>
+<script src="starwar.js"></script>
