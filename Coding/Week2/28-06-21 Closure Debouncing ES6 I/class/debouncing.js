@@ -32,7 +32,7 @@ function appendMovies(movies) {
 
 async function main(){
 
-    // let data= await  searchMovies();
+     //let data= await  searchMovies();
     // appendMovies(data.Search);
 
     let {Search}= await  searchMovies();
@@ -45,7 +45,6 @@ function throttleFunction(func,delay){
    
 //If setTimeout is already there, no need to do anything.
 
-//a
 
     if(timer_id){
         return false;
