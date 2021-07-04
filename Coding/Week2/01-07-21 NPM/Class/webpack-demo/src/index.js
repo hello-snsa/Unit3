@@ -3,9 +3,7 @@ import axios from 'axios';
 
 async function getData(){
 
-  var res= await axios.get("https://fakestoreapi.com/products");
-
-  console.log('res:', res);
+  axios.get("https://fakestoreapi.com/products");
       console.log("hello world");
 
 }
