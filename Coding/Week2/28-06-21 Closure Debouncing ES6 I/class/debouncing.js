@@ -4,11 +4,6 @@ let movies_div = document.getElementById('movies')
 
 async function searchMovies() {
     let name = document.getElementById('query').value;
-   
-    // if (name.length <= 2) {
-    //     return false;
- 
-    // }
 
     let response = await fetch(`https://www.omdbapi.com/?s=${name}&apikey=d806bd70`);
 
