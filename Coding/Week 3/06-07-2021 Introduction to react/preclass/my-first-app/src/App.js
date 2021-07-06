@@ -1,14 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import List from './Components/List';
+// import List from './Components/List';
+import Cards1 from './Components/Cards1';
+import Cards2 from './Components/Cards2';
 
+// var header= "Mobile Operating System";
+// var below=['Android','blackberry','iphone','Windows Phone'] ;
 
     function App(){
       return(
-        // <div ClassName="App">
-        //   Hello World
-        // </div>
-          <List/>
+      
+
+        <div>
+            <Cards1 /> 
+
+            <Cards2 />
+    
+          </div>
       
   );
 }
