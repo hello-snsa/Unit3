@@ -9,7 +9,7 @@ async function getData(){
 }
 getData();
 let nav= document.getElementById('navContainer');
-document.body.innerHTML=navbar();
+nav.innerHTML=navbar();
 
 // function component() {
   // const element = document.createElement('div');

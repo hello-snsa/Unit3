@@ -1,6 +1,6 @@
 function runProgram(input) {
 
-    
+  input=input.trim();
 var newInput= input.split(" ").map(Number);
 
 var data = newInput[0];

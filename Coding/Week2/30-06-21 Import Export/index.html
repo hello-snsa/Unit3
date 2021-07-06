@@ -12,8 +12,8 @@
 </head>
 
 <body>
-
-   
+    <div id="navb"></div>
+<h1> hello</h1>
     
     
 </body>
@@ -23,10 +23,11 @@
     
     import navbar from './components/navbar.js';
     
-    document.body.innerHTML = navbar();
+    // document.body.innerHTML = navbar();
+    let nav=document.getElementById("navb");
+    nav.innerHTML = navbar();
 
-
-    // document.body.append(navbar);
+    // document.body.append(navbar());
     // const navbar_data = navbar();
 
     // document.body.innerHTML = navbar_data;

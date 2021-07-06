@@ -1,91 +1,75 @@
-console.log("Script main.js is working.")
-
-function Register(e){
+function Register(e) {
     e.preventDefault();
-    let formdata={
+    let formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value,
+        username: document.getElementById('username').value,
+        mobile: document.getElementById('mobile').value,
+        description: document.getElementById('description').value
+    }
+    // console.log('formData: ', formData);
+    formData = JSON.stringify(formData)
+    fetch('http://masai-api-mocker.herokuapp.com/auth/register', {
+        method:'POST',
+        body: formData,
+        // mode:'no-cors' //if cors eroore
+        // additional information
+        headers: {
+            'Content-Type':'application/JSON'
+        }
+    }).then((resp) => {
+        console.log('resp: ', resp);
+        return resp.json()
         
-        name: document.getElementById('inp1').value,
-        email: document.getElementById('inp2').value,
-        password: document.getElementById('inp3').value,
-        username: document.getElementById('inp4').value,
-        mobile: document.getElementById('inp5').value,
-        description: document.getElementById('inp6').value
+    }).then((resp) => {
+        console.log(resp)
+    }).catch((error)=>{
+        console.log('error: ', error);
         
-    };
-    // console.log('formdata:',formdata);
-    formdata = JSON.stringify(formdata);
-
-    fetch ('https://masai-api-mocker.herokuapp.com/auth/register',
-    {
-        method: 'POST',
-        body: formdata,
-        //mode:'no-cars',
-
-        //additional information your request
-
-        headers:{
-        'Content-Type':'application/json',
-
-        },
-})
-.then((response) => {
-    return response.json()
-}).then((response) => {
-    console.log('response: ',response)
-
-}).catch((err) => {
-    console.log('err:',err)
-
-})
-}
-
-function Login(e){
-    e.preventDefault()
-
-    let formdata={
-        username:document.getElementById("inp7").value,
-        password:document.getElementById("inp8").value,
-    };
-    formdata= JSON.stringify(formdata);
-    
-    fetch("https://masai-api-mocker.herokuapp.com/auth/login",{
-
-        method: 'POST',
-        body: formdata,
-        
-
-        //additional information your request
-        headers:{
-        'Content-Type':'application/json',
-        },
-
-    }).then((response) => {
-
-        return response.json()
-    }).then((response) => {
-        console.log('response: ',response)
-    
-    }).catch((err) => {
-        console.log('err:',err)
-    
     })
-
-    // fetch(input: RequestInfo, init?: RequestInit): Promise<Response>
-
-    // })
 }
-
-function getmyProfile(){
-
-fetch(`https://masai-api-mocker.herokuapp.com/user/${u}`,{
-
-headers:{
-    
+function Login(e) {
+    e.preventDefault();
+    let formData = {
+        
+        username: document.getElementById('susername').value,
+        password: document.getElementById('spassword').value,
+  
+    }
+    // console.log('formData: ', formData);
+    let body = JSON.stringify(formData);
+    fetch('http://masai-api-mocker.herokuapp.com/auth/login', {
+        method:'POST',
+        body: body,
+        // mode:'no-cors' //if cors eroore
+        // additional information
+        headers: {
+            'Content-Type': 'application/JSON'
+        }
+    }).then((resp) => {
+        return resp.json()
+    }).then((resp) => {
+        // console.log('resp: ', resp);
+        getProfile(resp,formData)
+    }).catch((error) => {
+        console.log('error: ', error);
+        
+    })  
 }
-
-})
-
+// 24d36f8981ba35f01151e0b6454bb07a
+function getProfile({token},{username}) {
+    fetch(`http://masai-api-mocker.herokuapp.com/user/${username}`, {
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    }).then((resp) => {
+        return resp.json()
+    }).then((resp) => {
+        console.log('resp: ', resp);
+        
+    }).catch((error) => {
+        console.log('error: ', error);
+        
+    })  
 }
-
-
-//token: 4c9d33298e7898812521300c21bd7349
