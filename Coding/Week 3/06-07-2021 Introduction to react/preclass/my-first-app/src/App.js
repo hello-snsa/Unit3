@@ -1,14 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import {Counter} from "./Components/Counter"
+import List from './Components/List';
+
 
     function App(){
       return(
-        <div ClassName="App">
-          Hello World
-        </div>
+        // <div ClassName="App">
+        //   Hello World
+        // </div>
+          <List/>
+      
   );
 }
 
 export default App;
- 
+  
