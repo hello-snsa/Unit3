@@ -1,12 +1,13 @@
 import React from "react";
 
-function Cards(headline,data){
+export default function  Cards({header,data}){
+
 
     return(
         <div id="mainDiv">
 <div id="header">
-    <h1>
-        {headline}
+    <h1> 
+        {header}
     </h1>
 
 </div>
@@ -19,10 +20,24 @@ function Cards(headline,data){
       
     </ul>
 
+
+
+    {/* <ul>
+            {data.forEach((el) => {
+              <li>{data[el]}</li>
+            
+            })
+            }
+           
+    
+       
+      
+    </ul> */}
+
 </div>
 </div>
 
     )
 }
 
-export default Cards;
+// export default Cards;
