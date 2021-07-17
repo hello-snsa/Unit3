@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Google search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="home" >
+   
+
+        <div id="loginDiv">
+            <div>
+                <h1>SignUp </h1>
+                <form onsubmit="Register(event)">
+                    <input type="text"  id="name"placeholder="name">    
+                    <input type="email"  id="email"placeholder="email">    
+                    <input type="password"  id="password"placeholder="password">    
+                    <input type="text"  id="username"placeholder="username">    
+                    <input type="number"  id="mobile"placeholder="mobile">    
+                    <input type="text"  id="description"placeholder="description">    
+                    <input type="submit">
+                </form>
+            </div>
+            <div>
+                <h1>Login</h1>
+                <form onsubmit="Login(event)">
+                    <input type="text"  id="susername"placeholder="username">
+                    <input type="password"  id="spassword"placeholder="password">
+                    <input type="submit" >
+                </form>
+            </div>
+            </div>
+
+    <!-- loginDiv -->
+
+    <div id="homeDiv">
+
+<!-- <h1> Welcome to my search page</h1> -->
+
+<div class="navDiv">
+    <div class="logo"><img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" id="logo"/></div>
+
+    <div class="searchBarDiv">
+        <input id="searchBar" onchange="fetchIt()">
+    </div>
+        
+        <div class="insider">
+            <div class="voiceDiv miniImage">
+                <img id="voicePic" src="./voicelogo.jpg" />
+            </div>
+            <div class="searchLogoDiv miniImage">
+                <img id="searchLogo" src="./search.jpg" />
+            </div>
+    </div>
+    <div class="rightLogo">
+<div class="gearDiv miniImage">
+    <img id="gear" src="./gear.jpg" />
+</div>
+<div class="profileDiv miniImage">
+    <img id="profilePic" src="./profilePic.jpg" />
+</div>
+</div>
+<div class="clearIt"></div>
+<div class="SearchResultDiv">
+
+    <div class="leftArea"></div> <!-- blank -->
+    
+    <div class="centerArea">
+        <div id="search_information"></div>
+<div id="printResult">
+
+    <div id="organic_results"></div>
+</div>
+
+<!-- <div id="paginationDiv"></div> -->
+
+
+    </div>
+
+
+
+    <div class="rightArea"></div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+<div id="knowledgeDiv" >
+
+    <div id="knowledgeDivHeader"></div>
+
+</div>
+<div id="paginationDiv">
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a class="active" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#">10</a>
+        
+        <a href="#">&raquo;</a>
+      </div>
+</div>
+
+    </div>
+    <!-- homeDiv -->
+</body>
+</html>
+<script src="main.js"></script>

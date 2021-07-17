@@ -29,6 +29,8 @@ function Register(e) {
         
     })
 }
+
+
 function Login(e) {
     e.preventDefault();
     let formData = {
@@ -57,7 +59,12 @@ function Login(e) {
         
     })  
 }
+
+
 // 24d36f8981ba35f01151e0b6454bb07a
+
+
+
 function getProfile({token},{username}) {
     fetch(`http://masai-api-mocker.herokuapp.com/user/${username}`, {
         headers: {

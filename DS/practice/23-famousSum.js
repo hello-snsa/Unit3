@@ -1,7 +1,5 @@
 
 var m= 148;
-var mm= 148;
-// var n= m;
 let k= 3;
 
 //148148148
@@ -15,33 +13,26 @@ function sum(n){
 
 if(n<=0)
 {
-    console.log("num if ",num)
 return num;
 }
 else{
     num+= (n%10);
-    console.log("num ",num)
     n=Math.floor(n/10);
     
     sum(n);
 }
 
-
-
 }
-// console.log("num ",num)
-m= num*k;
-console.log(m);
+
+m= num*k; //39
+// console.log(m);
 
 
 while ( m>9)
-{   num=0;
-    let mm;
+{   
+    num=0;
+    sum(m);
+    m=num;
     
-  
-    mm = sum(m);
- 
-    console.log("num while ",num)
-console.log(mm);
-
 }
+console.log(m);

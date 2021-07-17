@@ -1,0 +1,93 @@
+#homeDiv{
+    margin-top: 5%;
+}
+
+.miniImage img{
+width: 30px;
+border-radius: 50%;
+float:left;
+}
+.logo{
+    float:left;
+    
+}
+.logo img{
+    width:50%
+}
+#searchBar{
+    width: 50vw;
+    height:2.5rem;
+    border-radius: 50px;
+
+}
+.searchBarDiv{
+    float: left;
+}
+#voicePic{
+margin-left: -8rem;
+padding-top: 0.5rem;
+width: 1.8%;
+/* background-color: red; */
+
+}
+#searchLogo{
+    margin-left: -5rem;
+    padding-top: 0.5rem;
+    /* width: 1.8%; */
+    /* background-color: red; */
+    
+    }
+#gear{
+    /* text-align: right; */
+    margin-left:25%;
+    padding-top: 1%;
+    /* clear:righ; */
+}
+#profilePic{
+    margin-left: 2%;
+    width:3%
+}
+input{
+    font-size: large;
+}
+.clearIt{
+    clear:both;
+}
+
+.SearchResultDiv{
+    display:grid;
+    grid-template-columns: 15% 50% 25%;
+    margin-top: 2%;
+
+}
+h1{
+    text-align:center;
+}
+h2{
+    color:blue;
+    font-family: 'Courier New';
+}
+#organic_results div{
+margin:10%
+}
+
+#paginationDiv{
+    margin-left: 20%;
+}
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
