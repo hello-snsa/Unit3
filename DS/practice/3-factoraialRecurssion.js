@@ -1,28 +1,32 @@
 function runProgram(input) {
 
     input=input.trim();
-    var n= Number(input);
-    // console.log(n)
+    var data=input.split("\n");
 
-    var m=1;
-   var res= rec(n);
-    // res
-
-    function rec(n){
-
-        if(n<=1)
-        {
-            return 1;
-        }
-        else{
-            m=m*n;//n*(n-1);
-            // console.log(m)
-            rec(n-1)
-        }
-
-    }
-    console.log(m);
+    var str= data[1];
     
+    // console.log(str)
+    
+    for(let i=0;i<str.length;i++)
+    {
+      // console.log("inside i")
+      let result2="";
+      for(let j=i;j<str.length;j++)
+      {
+        // console.log("inside j")
+        
+        let result="";
+        for(let k=i;k<=j;k++)
+        {
+          // console.log("inside k")
+          result+=str[k]; 
+        }
+        result2+=str[j]
+        console.log(result)
+      }
+      console.log(result2)
+    }
+
 
     
     
