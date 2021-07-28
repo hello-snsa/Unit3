@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grid{
+            display: grid;
+            grid-gap: 20px;;
+            background-color: lightgray;
+            grid-template:"i1 i1 i1"
+            "i2 i2 i3"
+            "i4 i4 i3"
+            "i5 i5 i5";
+        }
+        .grid div{
+            height:50px;
+        }
+        #item1{
+            grid-area: i1;
+            background-color:pink;
+        }
+        #item2{
+            grid-area: i2;
+            background-color: yellow;
+        }
+        #item3{
+            grid-area: i3;
+            background-color: red;
+        }
+        #item4{
+            grid-area: i4;
+            background-color: blue;;
+        }
+        #item5{
+            grid-area: i5;
+            background-color: green;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+<div class="grid">
+
+    <div id="item1">1</div>
+    <div id="item2">2</div>
+    <div id="item3">3</div>
+    <div id="item4">4</div>
+    <div id="item5">5</div>
+
+</div>
+
+
+
+</body>
+</html>

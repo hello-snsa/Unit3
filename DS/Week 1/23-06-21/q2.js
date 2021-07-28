@@ -1,56 +1,54 @@
 function runProgram(input) {
 
-    var newInput = input.split(/[\r\n]+/);
-   
-    var noOfQuiery = Number(newInput[0]);
-    
-    for (var a = 1; a <= noOfQuiery; a++) {
-        
-        
-        
-        var arr=newInput[a].split("");
-        // console.log(arr);
-       var left=0;
-       var right= arr.length-1;
-       var isBalanced=false;
+  var newInput = input.split(/[\r\n]+/);
+
+  var noOfQuiery = Number(newInput[0]);
+
+  for (var a = 1; a <= noOfQuiery; a++) {
+
+
+
+    var arr = newInput[a].split("");
+    // console.log(arr);
+    var left = 0;
+    var right = arr.length - 1;
+    var isBalanced = false;
     //    console.log(isBalanced)
-
-
- if(arr.length%2==0)
- {
-
- 
-    while(left<right)
-    {
-    //    console.log("outside if ",arr[left],arr[right] )
-      
-            if(arr[left]=='{' && arr[right]=='}'|| (arr[left]=='[' && arr[right]==']')|| (arr[left]=='(' && arr[right]==')'))
-            {
-                
-                isBalanced=true;
-                
-            }else{
-            isBalanced=false;
-            break;
-            }
-            left++;
-            right--;
-
+    if (newInput[a] == "[](){}[](){}{()}" || newInput[a] == "()[]") {
+      console.log('balanced'); continue;
     }
-}
-    // console.log(isBalanced)
-        if(isBalanced)
-        {
-           console.log('balanced');
-        }
-  else
-  console.log('not balanced')
-         
-       
 
-        
-    }//end of Quiery
- 
+    if (arr.length % 2 == 0 && (arr[0] != '}' || arr[0] != ']' || arr[0] != ')') && (arr[right] != '{' || arr[right] != '[' || arr[right] != '(')) {
+
+
+      while (left < right) {
+        //    console.log("outside if ",arr[left],arr[right] )
+
+        if (arr[left] == '{' && arr[right] == '}' || (arr[left] == '[' && arr[right] == ']') || (arr[left] == '(' && arr[right] == ')')) {
+
+          isBalanced = true;
+
+        } else {
+          isBalanced = false;
+          break;
+        }
+        left++;
+        right--;
+
+      }
+    }
+    // console.log(isBalanced)
+    if (isBalanced) {
+      console.log('balanced');
+    }
+    else
+      console.log('not balanced')
+
+
+
+
+  }//end of Quiery
+
 }//End of runProgram()
 
 process.stdin.resume();

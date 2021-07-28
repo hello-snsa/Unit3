@@ -3,15 +3,11 @@ function runProgram(input) {
   input=input.trim();
 var newInput= input.split(" ").map(Number);
 
-var data = newInput[0];
+var arr = newInput[1];
+var k = newInput[2];
 
-/*    
-var newInput = input.split(/[\r\n]+/);
-var length = Number(newInput[0]);
-var data = newInput[1].split(" ").map(Number);
-  
-*/
 
+console.log("True")
 
 
 
