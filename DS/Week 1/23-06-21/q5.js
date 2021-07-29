@@ -34,27 +34,36 @@ function runProgram(input) {
                 }
                 else {
 
-                    let check = checkIt(arr[left], data[data.length - 1]);
+                    let temp = data.pop();
+                    // console.log("temp", temp)
+
+                    let check = checkIt(arr[left], temp)
+
                     // console.log("check", check)
 
-                    if (data.length <= 0 || check == false) {
+                    if (check == false) {
 
 
                         isBalanced = false;
                         break;
 
                     }
-                    else {
 
-                        data.pop();
-                        // console.log("data pop", data)
-                    }
                 }
                 left++;
 
+                function checkIt(b, a) {
+                    if ((a == '(' && b == ')') || (a == '[' && b == ']') || (a == '{' && b == '}')) {
+                        return true;
+                    }
+                    else { return false };
+
+                }
+
+
             }
 
-            if (isBalanced)
+            if (isBalanced && data.length == 0)
                 console.log("balanced")
             else {
                 console.log('not balanced');
@@ -63,13 +72,7 @@ function runProgram(input) {
         }
 
 
-        function checkIt(a, b) {
-            if ((a == '(' && b == ')') || (a == '[' && b == ']') || (a == '{' && b == '}')) {
-                return true;
-            }
-            else return false;
 
-        }
 
 
     }//end of Quiery
@@ -91,4 +94,4 @@ process.on("SIGINT", function () {
     read = read.replace(/\n$/, "");
     runProgram(read);
     process.exit(0);
-});//End of program
+});//En d of program
