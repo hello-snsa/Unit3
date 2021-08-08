@@ -1,21 +1,21 @@
 function runProgram(input) {
 
-  input=input.trim();
-    var newInput = input.split(/[\r\n]+/);
-   
-    var noOfQuery = Number(newInput[0]);
-    
-    for (var a = 1; a <= noOfQuery; a++) {
-        
-       
-      var data=newInput[a].split(" ").map(Number);
+  input = input.trim();
+  var newInput = input.split(/[\r\n]+/);
 
-      // console.log("data",data);
-       
+  var noOfQuery = Number(newInput[0]);
 
-        
-    }//end of Quiery
- 
+  for (var a = 1; a <= noOfQuery; a++) {
+
+
+    var data = newInput[a].split(" ").map(Number);
+
+    // console.log("data",data);
+
+
+
+  }//end of Query
+
 }//End of runProgram()
 
 process.stdin.resume();
