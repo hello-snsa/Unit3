@@ -1,9 +1,9 @@
 function runProgram(input) {
 
-    var newInput = input.split(" ").map(Number);
+    var newInput = input.split(" ");
     var str = newInput[0];
 
-    var k = newInput[1];
+    var k = Number(newInput[1]);
     var sum = 0;
 
     for (var i = 0; i < str.length; i++) {
