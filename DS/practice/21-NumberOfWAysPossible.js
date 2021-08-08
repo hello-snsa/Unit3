@@ -1,10 +1,21 @@
 function runProgram(input) {
 
-  input=Number(input.trim());
+  input = input.trim();
+  input = Number(input);
 
+  let res = steps(input);
 
-console.log(input)
+  function steps(n) {
 
+    if (n == 1 || n == 0)
+      return 1;
+    else if (n == 2)
+      return 2;
+    else return steps(n - 3) + steps(n - 2) + steps(n - 1);
+
+  }
+
+  console.log(res)
 
 
 
@@ -26,5 +37,3 @@ process.on("SIGINT", function () {
   runProgram(read);
   process.exit(0);
 });//End of program
-
-
