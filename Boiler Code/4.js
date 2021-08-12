@@ -10,7 +10,7 @@ function runProgram(input) {
 
     var data = newInput[a].split(" ").map(Number);
 
-    // console.log("data",data);
+    console.log("data", data);
 
 
 

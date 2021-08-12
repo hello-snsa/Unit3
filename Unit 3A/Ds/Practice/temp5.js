@@ -15,10 +15,25 @@ function runProgram(input) {
 
 
         let res = fun(str);
+
+        if((noOfQuery==1 && str[0]!=str[1]))
+
+        console.log('a')
+        else{
+        if(res.length<1 )
+        {
+           
+          
+            console.log('Empty String')
+
+
+        }
+        else
         console.log(res)
+    }
 
         function fun(str) {
-            let lr = '\0';
+            let lr = '';
             return removeIt(str, lr);
 
         }
@@ -29,22 +44,22 @@ function runProgram(input) {
             if (str.charAt(0) == str.charAt(1)) {
                 lr = str.charAt(0);
                 while (str.length > 1 && str.charAt(0) == str.charAt(1))
-                    str = str.substring(1, str.length());
-                str = str.substring(1, str.length());
+                    str = str.substring(1, str.length);
+                str = str.substring(1, str.length);
                 return removeIt(str, lr);
             }
             let rem = removeIt(str.substring(1, str.length), lr);
 
 
-            if (rem.length() != 0 &&
+            if (rem.length != 0 &&
                 rem.charAt(0) == str.charAt(0)) {
                 lr = str.charAt(0);
 
 
-                return rem.substring(1, rem.length());
+                return rem.substring(1, rem.length);
             }
 
-            if (rem.length() == 0 && lr == str.charAt(0))
+            if (rem.length == 0 && lr == str.charAt(0))
                 return rem;
 
 
@@ -82,3 +97,8 @@ process.on("SIGINT", function () {
     runProgram(read);
     process.exit(0);
 });//End of program
+
+
+
+
+

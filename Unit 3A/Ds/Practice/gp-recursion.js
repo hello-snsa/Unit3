@@ -4,6 +4,7 @@ function runProgram(input) {
     var n = Number(newInput[0]);
     var r = Number(newInput[1]);
     console.log(n, r)
+    
     let res = fun(n);
     console.log(res)
 
