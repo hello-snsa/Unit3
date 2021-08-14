@@ -117,3 +117,75 @@ ALTER TABLE comments
 
 select * from comments;
 
+ALTER TABLE comments
+  drop  tag_id ;
+  
+  select * from comments;
+  
+ 
+   
+  ALTER TABLE posts
+   ADD  tag_id int,
+  ADD CONSTRAINT  tag_id  FOREIGN KEY (tag_id) references tags(id);
+  
+  select * from posts;
+  
+  
+   ALTER TABLE authors
+  ADD CONSTRAINT  posts_id  FOREIGN KEY (posts_id) references posts(id),
+  ADD CONSTRAINT  comments_id  FOREIGN KEY (comments_id) references comments(id);
+  ;
+  
+  
+   select * from authors;
+   describe authors;
+   
+   ALTER TABLE tags
+   ADD posts_id int,
+   ADD CONSTRAINT  posts_id  FOREIGN KEY (posts_id) references posts(id);
+   
+    select * from tags;
+   
+  
+  drop table authors;
+  
+  create table authors 
+(
+id int auto_increment primary key,
+first_name varchar(50) not null,
+last_name varchar(50),
+posts_id int,
+comments_id int,
+foreign key(posts_id) references posts(id),
+foreign key(comments_id) references comments(id)
+);
+
+select * from authors;
+
+
+-- adding authors data
+
+ describe authors;
+ insert into authors ;
+ 
+ select * from posts;
+
+
+
+
+
+
+
+
+-- find all posts and comments of an author
+
+
+ 
+  
+  
+  
+  
+  
+  
+
+ALTER TABLE tbl_name DROP FOREIGN KEY fk_symbol;
