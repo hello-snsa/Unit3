@@ -3,39 +3,71 @@ function runProgram(input) {
 
     var newInput = input.split(/[\r\n]+/);
 
+    // var str = "All-convoYs-9-be:Alert1.";
     var str = newInput[0];
     var k = Number(newInput[1]);
-    if (k > 26) {
+    var kk = k;
+    if (k >= 26) {
         let n = Math.floor(k / 26);
         k = k - (26 * n);
 
     }
+    if (kk >= 10) {
+        let n = Math.floor(kk / 10);
+        kk = kk - (10 * n);
 
+    }
     var data = [];
-    var newStr = [];
 
-    var str1 = "abcdefghijklmnopqrstuvwxyz";
-    var str2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var str3 = "0123456789";
+    // console.log("k ",k)
 
-    for (var i = 0; i < str.length; i++) {
-        data.push(str.charCodeAt(i));
-    }
+    console.log(fun())
 
-    for (i = 0; i < str.length; i++) {
-        if (str1.includes(str[i]) || str2.includes(str[i]) || str3.includes(str[i])) {
 
-            data[i] = data[i] + k;
+
+    function fun() {
+
+        for (var i = 0; i < str.length; i++) {
+            if (str.charCodeAt(i) >= 48 && str.charCodeAt(i) <= 57) {
+                let newNum = str.charCodeAt(i) + kk;
+                if (newNum > 57) {
+                    newNum = newNum - 10;
+                }
+                data.push(newNum);
+            }
+            else if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
+                let newNum = str.charCodeAt(i) + k;
+                if (newNum > 90) {
+                    newNum = newNum - 26;
+                }
+                data.push(newNum);
+            }
+
+            else if (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) {
+                let newNum = str.charCodeAt(i) + k;
+                if (newNum > 122) {
+                    newNum = newNum - 26;
+                }
+                data.push(newNum);
+            }
+
+            else {
+                data.push(str.charCodeAt(i))
+            }
+
         }
+        // console.log("data  is ", data)
+
+
+        let result = "";
+        for (var i = 0; i < data.length; i++) {
+
+            result += String.fromCharCode(data[i]);
+
+        }
+        return result;
+
     }
-
-    for (var i = 0; i < data.length; i++) {
-        var text = String.fromCharCode(data[i]);
-        newStr.push(text);
-    }
-
-    console.log(newStr.join(""));
-
 
 } //End of runProgram()
 
