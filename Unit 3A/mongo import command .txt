@@ -1,0 +1,1 @@
+mongoimport --host=localhost --port 27017 --db=web10demo --drop --collection=users --file Downloads/MOCK_DATA.csv --csvArray
