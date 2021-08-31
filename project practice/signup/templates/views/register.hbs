@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{> headers}}
+    <title>Registration</title>
+</head>
+<body>
+    {{>navbar}}
+<h1> Hello from Registration</h1>
+<div class="registrationMainDiv">
+<form action="/register" method="POST">
+
+<div>
+<label for="userName" >UserName</label>
+
+<input id="userName" name="userName" type="text"/>
+</div>
+<div>
+<label for="userEmail" >Email</label>
+
+<input id="userEmail" name="userEmail" type="email"/>
+</div>
+<div>
+<label for="password" >password</label>
+
+<input id="userPassword" name="password" type="password" />
+    
+</div>
+<div>
+<label for="confirmPassword" >Confirm password</label>
+
+<input id="confirmPassword" name="confirmPassword" type="password" />
+</div>
+<div>
+    
+<label class="genderRadio" for="gender" >
+
+<input type="radio" name="gender" value="male" checked>Male
+</label>
+
+<label class="genderRadio" for="gender" >
+
+<input type="radio" name="gender" value="female">Female
+
+</label>
+</div>
+    
+<div>
+<input type="submit" class="registerBtn" value="Register Me"/>
+
+</div>
+
+
+</form>
+   </div> 
+</body>
+</html>
+
+
+
+
