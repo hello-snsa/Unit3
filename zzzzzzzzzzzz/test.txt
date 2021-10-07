@@ -1,0 +1,55 @@
+
+arr=[1,2,3,4,5]
+target= 3;
+op:- 1 or -1
+
+I > loop in 0 to n-1
+J > loop inI n
+
+I + J == target
+print 1
+break
+
+loop over 
+print -1;
+
+
+
+////////////////////
+
+
+
+
+main(){
+let arr=[1,2,3,4,5];
+let T=3;
+   let res= sum(arr,T)
+   console.log(res)
+}
+
+
+function sum (arr,T)
+{
+let F=0;
+let R=arr.length-1;
+
+   while(F<R)
+    {
+
+if(arr[F]+arr[R]==T){
+return 1;
+
+    }
+
+    else if(arr[F]+arr[R]> T)
+    {
+        R--;
+
+    }
+    else{
+        F++;
+    }
+}
+
+
+
